@@ -3,6 +3,8 @@ import GradientBlobs from "./GradientBlobs";
 import AnimatedGrid from "./AnimatedGrid";
 import BlockchainConnections from "./BlockchainConnections";
 import FloatingCubes from "./FloatingCubes";
+import NoiseOverlay from "./NoiseOverlay";
+import ShootingStars from "./ShootingStars";
 
 const ParticleNetwork = lazy(() => import("./ParticleNetwork"));
 
@@ -20,9 +22,10 @@ function HeroBackground() {
       <Suspense fallback={null}>
         <ParticleNetwork />
       </Suspense>
+      <ShootingStars />
       <FloatingCubes />
-      {/* Soft vignette for readability */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,rgba(5,8,22,0.55)_80%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_15%,rgba(5,8,22,0.5)_72%,rgba(5,8,22,0.85)_100%)]" />
+      <NoiseOverlay opacity={0.045} />
     </div>
   );
 }

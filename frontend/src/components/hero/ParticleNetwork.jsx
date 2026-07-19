@@ -16,8 +16,7 @@ function ParticleCanvas({ options }) {
 }
 
 /**
- * Layer 1 + 7: linked particle network + drifting star dust.
- * Uses @tsparticles/react v4 ParticlesProvider.
+ * Layered particle field — mixed speeds for depth + subtle star dust.
  */
 function ParticleNetwork({ className = "" }) {
   const options = useMemo(
@@ -28,29 +27,37 @@ function ParticleNetwork({ className = "" }) {
       detectRetina: true,
       particles: {
         number: {
-          value: 90,
+          value: 70,
           density: { enable: true, width: 1200, height: 800 },
         },
-        color: { value: ["#60a5fa", "#8b5cf6", "#22d3ee", "#a78bfa"] },
+        color: { value: ["#60a5fa", "#8b5cf6", "#22d3ee", "#a78bfa", "#e0e7ff"] },
         links: {
           enable: true,
           color: "#6366f1",
-          distance: 130,
-          opacity: 0.18,
-          width: 0.8,
+          distance: 120,
+          opacity: 0.14,
+          width: 0.7,
         },
         move: {
           enable: true,
-          speed: 0.35,
+          speed: { min: 0.12, max: 0.85 },
           direction: "none",
           outModes: { default: "out" },
           random: true,
+          straight: false,
         },
         opacity: {
-          value: { min: 0.15, max: 0.55 },
-          animation: { enable: true, speed: 0.4, sync: false },
+          value: { min: 0.12, max: 0.55 },
+          animation: { enable: true, speed: 0.35, sync: false },
         },
-        size: { value: { min: 0.6, max: 2.2 } },
+        size: { value: { min: 0.5, max: 2.1 } },
+        twinkle: {
+          particles: {
+            enable: true,
+            frequency: 0.04,
+            opacity: 0.85,
+          },
+        },
       },
       interactivity: {
         detectsOn: "window",
@@ -59,7 +66,7 @@ function ParticleNetwork({ className = "" }) {
           resize: { enable: true },
         },
         modes: {
-          repulse: { distance: 90, duration: 0.35, speed: 0.4 },
+          repulse: { distance: 80, duration: 0.3, speed: 0.35 },
         },
       },
     }),

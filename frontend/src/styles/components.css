@@ -190,6 +190,11 @@
     background-color var(--th-duration) var(--th-ease);
 }
 
+.th-input.pr-12,
+.th-input--with-action {
+  padding-right: 2.75rem;
+}
+
 .th-input::placeholder {
   color: var(--th-text-muted);
 }

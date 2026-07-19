@@ -77,6 +77,17 @@
   }
 }
 
+@keyframes th-ripple {
+  from {
+    transform: scale(0);
+    opacity: 0.45;
+  }
+  to {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
 .th-animate-fade-in {
   animation: th-fade-in var(--th-duration-slow) var(--th-ease) both;
 }
