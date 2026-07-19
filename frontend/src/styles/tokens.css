@@ -1,0 +1,117 @@
+/* TrustHub Design Tokens
+   Dark SaaS · Blue primary · Purple secondary · Emerald accent
+*/
+
+:root {
+  /* Brand */
+  --th-primary: #3b82f6;
+  --th-primary-hover: #2563eb;
+  --th-primary-muted: rgba(59, 130, 246, 0.15);
+  --th-secondary: #8b5cf6;
+  --th-secondary-hover: #7c3aed;
+  --th-secondary-muted: rgba(139, 92, 246, 0.15);
+  --th-accent: #10b981;
+  --th-accent-hover: #059669;
+  --th-accent-muted: rgba(16, 185, 129, 0.15);
+
+  /* Surfaces — deep navy blockchain aesthetic */
+  --th-bg: #070b14;
+  --th-bg-elevated: #0c1220;
+  --th-bg-surface: #111827;
+  --th-bg-overlay: rgba(7, 11, 20, 0.72);
+
+  /* Glass */
+  --th-glass: rgba(17, 24, 39, 0.55);
+  --th-glass-border: rgba(148, 163, 184, 0.14);
+  --th-glass-strong: rgba(17, 24, 39, 0.78);
+
+  /* Text — WCAG-conscious on dark */
+  --th-text: #f1f5f9;
+  --th-text-secondary: #94a3b8;
+  --th-text-muted: #64748b;
+  --th-text-inverse: #0f172a;
+
+  /* Borders & focus */
+  --th-border: rgba(148, 163, 184, 0.12);
+  --th-border-strong: rgba(148, 163, 184, 0.24);
+  --th-focus-ring: 0 0 0 3px rgba(59, 130, 246, 0.45);
+
+  /* Semantic */
+  --th-success: #10b981;
+  --th-warning: #f59e0b;
+  --th-danger: #ef4444;
+  --th-info: #3b82f6;
+
+  /* Gradients */
+  --th-gradient-brand: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 55%, #10b981 120%);
+  --th-gradient-hero: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(59, 130, 246, 0.28), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 90% 20%, rgba(139, 92, 246, 0.18), transparent 50%),
+    radial-gradient(ellipse 40% 35% at 10% 60%, rgba(16, 185, 129, 0.1), transparent 45%);
+  --th-gradient-card: linear-gradient(160deg, rgba(59, 130, 246, 0.08), rgba(139, 92, 246, 0.04) 50%, transparent);
+
+  /* Typography */
+  --th-font-display: "Syne", "Segoe UI", sans-serif;
+  --th-font-body: "Manrope", "Segoe UI", sans-serif;
+  --th-font-mono: "IBM Plex Mono", "SF Mono", ui-monospace, monospace;
+
+  --th-text-xs: 0.75rem;
+  --th-text-sm: 0.875rem;
+  --th-text-base: 1rem;
+  --th-text-lg: 1.125rem;
+  --th-text-xl: 1.25rem;
+  --th-text-2xl: 1.5rem;
+  --th-text-3xl: 1.875rem;
+  --th-text-4xl: 2.25rem;
+  --th-text-5xl: clamp(2.5rem, 5vw, 3.5rem);
+  --th-text-hero: clamp(2.75rem, 6.5vw, 4.25rem);
+
+  --th-leading-tight: 1.15;
+  --th-leading-snug: 1.35;
+  --th-leading-normal: 1.6;
+
+  --th-tracking-tight: -0.03em;
+  --th-tracking-wide: 0.06em;
+
+  /* Spacing scale */
+  --th-space-1: 0.25rem;
+  --th-space-2: 0.5rem;
+  --th-space-3: 0.75rem;
+  --th-space-4: 1rem;
+  --th-space-5: 1.25rem;
+  --th-space-6: 1.5rem;
+  --th-space-8: 2rem;
+  --th-space-10: 2.5rem;
+  --th-space-12: 3rem;
+  --th-space-16: 4rem;
+  --th-space-20: 5rem;
+  --th-space-24: 6rem;
+
+  /* Radius */
+  --th-radius-sm: 0.5rem;
+  --th-radius-md: 0.75rem;
+  --th-radius-lg: 1rem;
+  --th-radius-xl: 1.25rem;
+  --th-radius-2xl: 1.5rem;
+  --th-radius-full: 9999px;
+
+  /* Shadows */
+  --th-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --th-shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --th-shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.45);
+  --th-shadow-glow-blue: 0 0 40px rgba(59, 130, 246, 0.25);
+  --th-shadow-glow-emerald: 0 0 32px rgba(16, 185, 129, 0.2);
+
+  /* Motion */
+  --th-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --th-duration-fast: 150ms;
+  --th-duration: 250ms;
+  --th-duration-slow: 450ms;
+
+  /* Layout */
+  --th-container: 72rem;
+  --th-container-narrow: 42rem;
+  --th-nav-height: 4.25rem;
+  --th-z-nav: 100;
+  --th-z-modal: 200;
+  --th-z-toast: 300;
+}
