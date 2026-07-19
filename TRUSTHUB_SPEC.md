@@ -88,9 +88,11 @@ TrustHub/
 
 ## 7. Frontend Rules
 
-- Stack: React + Vite. **Do not add Tailwind until explicitly approved.**
+- Stack: React + Vite + **Tailwind CSS** (approved for marketing / premium UI).
+- Motion: Framer Motion; particles via `@tsparticles/react` (slim).
 - Routing via `react-router-dom`; pages live under `src/pages/`.
-- Shared UI under `src/components/`; HTTP clients under `src/services/` (axios).
+- Shared UI under `src/components/`; hero layers under `src/components/hero/`.
+- HTTP clients under `src/services/` (axios).
 - Keep pages thin; push API and hash helpers into services/utils.
 - No blockchain private keys in the browser for server-owned wallets.
 

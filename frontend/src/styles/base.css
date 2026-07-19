@@ -19,8 +19,8 @@ body {
   line-height: var(--th-leading-normal);
   color: var(--th-text);
   background-color: var(--th-bg);
-  background-image: var(--th-gradient-hero);
-  background-attachment: fixed;
+  /* Hero owns cinematic layers — keep body flat so particles show through */
+  background-image: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

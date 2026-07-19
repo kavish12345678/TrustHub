@@ -1,6 +1,7 @@
 import PublicLayout from "../layouts/PublicLayout";
 import SectionContainer from "../components/common/SectionContainer";
 import { Button, Card } from "../components/ui";
+import { HeroSection } from "../components/hero";
 import "../styles/landing.css";
 
 const FEATURES = [
@@ -101,49 +102,9 @@ const SECURITY = [
 function Landing() {
   return (
     <PublicLayout>
-      <div className="th-landing">
-        {/* Hero */}
-        <section className="th-hero" aria-labelledby="hero-heading">
-          <div className="th-hero__atmosphere" aria-hidden="true">
-            <div className="th-hero__grid" />
-            <div className="th-hero__orb th-hero__orb--blue" />
-            <div className="th-hero__orb th-hero__orb--purple" />
-          </div>
+      <div className="th-landing bg-[#050816]">
+        <HeroSection />
 
-          <div className="th-hero__content">
-            <div className="th-hero__brand">
-              <span className="th-hero__brand-mark" aria-hidden="true" />
-              <span className="th-hero__brand-name">TrustHub</span>
-            </div>
-
-            <h1 id="hero-heading" className="th-hero__headline">
-              Prove documents are authentic—on Ethereum.
-            </h1>
-
-            <p className="th-hero__support">
-              Hash files with SHA-256, anchor proofs on-chain, and verify authenticity anytime
-              without exposing the original document.
-            </p>
-
-            <div className="th-hero__actions">
-              <Button variant="primary" size="lg" to="/register">
-                Start verifying
-              </Button>
-              <Button variant="ghost" size="lg" href="#how-it-works">
-                See how it works
-              </Button>
-            </div>
-          </div>
-
-          <div className="th-hero__chain" aria-hidden="true">
-            <div className="th-hero__ring" />
-            <div className="th-hero__ring th-hero__ring--2" />
-            <div className="th-hero__ring th-hero__ring--3" />
-            <div className="th-hero__hash">0x7f3a…c91e</div>
-          </div>
-        </section>
-
-        {/* Features */}
         <SectionContainer
           id="features"
           eyebrow="Capabilities"
@@ -164,7 +125,6 @@ function Landing() {
           </div>
         </SectionContainer>
 
-        {/* How it works */}
         <SectionContainer
           id="how-it-works"
           eyebrow="Workflow"
@@ -185,7 +145,6 @@ function Landing() {
           </div>
         </SectionContainer>
 
-        {/* Why blockchain */}
         <SectionContainer
           id="why-blockchain"
           eyebrow="Why blockchain"
@@ -216,7 +175,6 @@ function Landing() {
           </div>
         </SectionContainer>
 
-        {/* Security */}
         <SectionContainer
           id="security"
           eyebrow="Security"
@@ -235,7 +193,6 @@ function Landing() {
           </div>
         </SectionContainer>
 
-        {/* CTA */}
         <SectionContainer spacing="tight" className="th-landing-cta">
           <div className="th-cta">
             <h2 className="th-cta__title">Ready to anchor trust?</h2>
